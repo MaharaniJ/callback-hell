@@ -1,0 +1,18 @@
+const countdown = (number, callback) => {
+  setTimeout(() => {
+    console.log(number);
+    target.innerHTML = number;
+    if (number > 1) {
+      countdown(number - 1, callback);
+    } else {
+      callback();
+    }
+  }, 1000);
+};
+
+const sayHappyBirthday = () => {
+  target.innerHTML = "Happy Birthday!";
+    console.log("Happy Birthday!");
+};
+
+countdown(10, sayHappyBirthday);
